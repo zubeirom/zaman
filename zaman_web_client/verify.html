@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Solid Template</title>
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,600" rel="stylesheet">
+    <link rel="stylesheet" href="dist/css/style.css">
+    <script src="https://unpkg.com/animejs@3.0.1/lib/anime.min.js"></script>
+    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+</head>
+<body class="is-boxed has-animations">
+    <div style="display: block" id="loadingText">
+        <h1 style="text-align: center">Verifying Email...</h1>
+    </div>
+    <div style="display: none" id="successText">
+        <h1 style="text-align: center">Email successfully verified</h1>
+    </div>
+    <div style="display: none" id="errorText">
+        <h1 style="text-align: center">Could not make request</h1>
+    </div>
+<script src="dist/js/main.min.js"></script>
+<script>
+    window.onload = async function() {
+        const params = new Proxy(new URLSearchParams(window.location.search), {
+            get: (searchParams, prop) => searchParams.get(prop),
+        });
+        let token = params['t'];
+        if(!token) {
+            document.getElementById("errorText").style.display = "block"
+            document.getElementById("loadingText").style.display = "none"
+            document.getElementById("successText").style.display = "none"
+            return;
+        }
+        const res = await fetch("http://localhost:8080/api/users/verify", {
+            method: "POST",
+            headers: {
+                "Authorization": "Bearer " + token
+            }
+        });
+
+        console.log(res);
+
+        if(res.ok) {
+            document.getElementById("errorText").style.display = "none"
+            document.getElementById("loadingText").style.display = "none"
+            document.getElementById("successText").style.display = "block"
+        } else {
+            document.getElementById("errorText").style.display = "block"
+            document.getElementById("loadingText").style.display = "none"
+            document.getElementById("successText").style.display = "none"
+        }
+    }
+</script>
+</body>
+</html>

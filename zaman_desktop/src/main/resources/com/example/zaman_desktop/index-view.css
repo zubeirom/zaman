@@ -1,0 +1,43 @@
+.nav-items {
+    -fx-padding: 20 20 20 20;
+}
+
+#nav-menu-header {
+    -fx-font-size: 20;
+}
+
+#button-new {
+    -fx-background-color: #33E1F0;
+    -fx-border-color: #33E1F0;
+}
+
+#button-new:hover {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #33E1F0;
+}
+
+#button-settings {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #33E1F0;
+}
+
+#button-settings:hover {
+    -fx-background-color: #33E1F0;
+    -fx-border-color: #33E1F0;
+}
+
+.appointment-panel {
+    -fx-background-color: #FF0000;
+}
+
+#vbox-apt {
+    -fx-padding: 20 20 20 20;
+}
+
+.vbox-apt {
+    -fx-padding: 20 20 20 20;
+}
+
+#apt-pane {
+    -fx-max-width: "Infinity";
+}

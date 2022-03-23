@@ -1,0 +1,172 @@
+.button {
+    -fx-background-color: #57606f ;
+    -fx-border-radius: 15px ;
+    -fx-background-radius: 15px;
+}
+
+.button:hover{
+    -fx-border-color: #f1c40f ;
+    -fx-background-color: #95a5a6;
+}
+
+
+.buttonBack {
+    -fx-background-color:  #2f3542 ;
+    -fx-border-radius: 15px ;
+    -fx-background-radius: 15px;
+}
+
+.buttonBack:hover{
+    -fx-border-color: #f1c40f ;
+    -fx-background-color: #95a5a6;
+}
+
+.buttonRot {
+    -fx-background-color:  #b33939 ;
+    -fx-border-radius: 15px ;
+    -fx-background-radius: 15px;
+}
+
+.buttonRot:hover{
+    -fx-border-color: #f1c40f;
+    -fx-background-color: #ff5757;
+}
+
+.buttonBlu {
+    -fx-background-color:  #227093 ;
+    -fx-border-radius: 15px ;
+    -fx-background-radius: 15px;
+}
+
+.buttonBlu:hover{
+    -fx-border-color: #f1c40f ;
+    -fx-background-color: #57e9ff;
+}
+
+.buttonGelb {
+    -fx-background-color:  #f1c40f ;
+    -fx-border-radius: 15px ;
+    -fx-background-radius: 15px;
+}
+
+.buttonGelb:hover{
+    -fx-border-color: #f1c40f ;
+    -fx-background-color: #f1ff70;
+}
+
+.buttonGruen {
+    -fx-background-color:  #218c74 ;
+    -fx-border-radius: 15px ;
+    -fx-background-radius: 15px;
+}
+
+.buttonBluBackground {
+    -fx-background-color:   #0C39FF;
+    -fx-border-radius: 15px ;
+    -fx-background-radius: 15px;
+}
+
+
+.buttonGrayBackground {
+    -fx-background-color:    #d5d5d5;
+    -fx-border-radius: 15px ;
+    -fx-background-radius: 15px;
+}
+
+
+.buttonGruen:hover{
+    -fx-border-color: #f1c40f ;
+    -fx-background-color: #c9ffd1;
+}
+
+.buttonGruenEdit {
+    -fx-background-color:  #218c74 ;
+    -fx-border-radius: 0px ;
+    -fx-background-radius: 0px;
+}
+
+.buttonGruenEdit:hover{
+    -fx-border-color: #f1c40f ;
+    -fx-background-color: #c9ffd1;
+}
+
+
+.buttonOrang {
+    -fx-background-color:  #e67e22 ;
+    -fx-border-radius: 15px ;
+    -fx-background-radius: 15px;
+}
+
+.buttonOrang:hover{
+    -fx-border-color: #f1c40f;
+    -fx-background-color: #ffb561;
+}
+
+.buttonEdit {
+    -fx-background-color: #808e9b ;
+    -fx-border-radius: 0px ;
+    -fx-background-radius: 0px;
+}
+
+.buttonEdit:hover{
+    -fx-background-color: #a5b9cc;
+}
+
+
+.buttonLogin {
+    -fx-text-fill: #ffffff;
+    -fx-background-color:   #1e272e ;
+    -fx-border-color: #57e9ff;
+    -fx-border-radius: 15px ;
+    -fx-background-radius: 15px;
+}
+
+.buttonLogin:hover{
+    -fx-text-fill: #000000 ;
+    -fx-border-color: #57e9ff;
+    -fx-background-color: #566682;
+}
+
+.textFeld {
+    -fx-text-fill: #ffffff;
+    -fx-prompt-text-fill: #858585;
+}
+
+
+
+
+.spinner {
+    -fx-prompt-text-fill: #ffffff;
+    -fx-text-fill: #ffffff;
+    -fx-background-color: none;
+
+    -fx-padding: 0 0 3 0;
+}
+.spinner .increment-arrow-button,
+.spinner .decrement-arrow-button {
+    -fx-background-color: transparent;
+}
+
+.spinner .increment-arrow-button:hover,
+.spinner .decrement-arrow-button:hover {
+    -fx-background-color: #bdbdbd;
+}
+
+.spinner .increment-arrow-button .increment-arrow,
+.spinner .decrement-arrow-button .decrement-arrow {
+    -fx-background-color: #57e9ff;
+    -fx-font-size: 15px;
+}
+
+.spinner .increment-arrow-button .increment-arrow:hover,
+.spinner .decrement-arrow-button .decrement-arrow:hover {
+    -fx-background-color: #bdbdbd;
+    -fx-font-size: 15px;
+}
+
+.spinner .text-field {
+    -fx-text-fill: #ffffff;
+    -fx-background-color: transparent;
+    -fx-border-width: 0 0 1 0;
+    -fx-border-color: #bdbdbd;
+}

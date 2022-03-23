@@ -1,0 +1,50 @@
+server:
+  port: 8080
+
+
+
+jwt:
+  secret: Loremipsumdolorsitametconsecteturadipiscingelitseddoeiusmodtemporincididuntutlaboretandsomemoreshitfoobar
+
+#eureka:
+#  client:
+#    serviceUrl:
+#      defaultZone: http://localhost:8761/eureka
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/zamanDB
+    username: root
+    password: admin
+  jpa:
+    hibernate:
+      ddl-auto: update
+  application:
+    name: gateway-service
+  cloud:
+    gateway:
+      globalcors:
+        cors-configurations:
+          '[/**]':
+            allowedOrigins: "*"
+            allowedMethods:
+            - GET
+            - POST
+      routes:
+      - id: applicationModule
+        uri: http://localhost:8081/
+        predicates:
+        - Path=/api/users/**
+        filters:
+        - name: AuthenticationFilter
+          args:
+            baseMessage: Foo
+      - id: applicationModule
+        uri: http://localhost:8081/
+        predicates:
+        - Path=/api/register/**
+      - id: applicationModule
+        uri: http://localhost:8081/
+        predicates:
+        - Path=/api/verify-email/**
